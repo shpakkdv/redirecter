@@ -1,0 +1,76 @@
+html,
+body {
+  height: 100%;
+}
+
+p, div, button, ol, li {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+  flex-grow: 1;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, max-content);
+  column-gap: 20px;
+  row-gap: 20px;
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.copyright {
+  margin: 10px 0;
+}
+
+.section:nth-child(2n + 1) {
+  margin-left: 20px;
+}
+.section:nth-child(2n) {
+  margin-right: 20px;
+}
+.section {
+  @media (max-width: 700px) {
+    margin: 0 20px;
+  }
+}
+
+.title {
+  padding-left: 15px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+ol {
+  padding: 0 0 0 30px;
+  margin: 10px 0 0;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+.goTo {
+  margin-left: 10px;
+  padding: 1px 10px;
+  border-radius: 10px;
+  border: 1px solid green;
+  background: azure;
+  cursor: pointer;
+  transition: background 300ms;
+}
+.goTo:hover {
+  background: rgb(76, 221, 221);
+}
