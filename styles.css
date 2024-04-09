@@ -3,9 +3,10 @@ body {
   height: 100%;
 }
 
-p, div, button, ol, li {
+p, div, button, ol, li, a {
   padding: 0;
   margin: 0;
+  text-decoration: unset;
 }
 
 body {
@@ -31,8 +32,9 @@ main {
   }
 }
 
-.copyright {
+footer {
   margin: 10px 0;
+  text-align: center;
 }
 
 .section:nth-child(2n + 1) {
@@ -47,13 +49,23 @@ main {
   }
 }
 
+.sectionLogo {
+  width: 12vw;
+  display: flex;
+  margin: auto;
+}
+
 .title {
   padding-left: 15px;
   font-size: 18px;
   font-weight: 700;
+  text-align: center;
 }
 
 ol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0 0 0 30px;
   margin: 10px 0 0;
 }
@@ -63,6 +75,7 @@ li {
 }
 
 .goTo {
+  display: inline-block;
   margin-left: 10px;
   padding: 1px 10px;
   border-radius: 10px;
@@ -70,6 +83,7 @@ li {
   background: azure;
   cursor: pointer;
   transition: background 300ms;
+  color: rgb(0, 0, 238);
 }
 .goTo:hover {
   background: rgb(76, 221, 221);
